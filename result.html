@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<style>
+body {
+  background-image: url("back.png");
+}
+p {
+font-family:helvetica;
+font-size:15px;
+}
+h1 {
+font-family:helvetica;
+font-size:22px;
+color:#252525;
+}
+h3 {
+font-family:helvetica;
+font-size:17px;
+color:#252525;
+padding:0;
+}
+</style>
+<body onload="setData()">
+
+<script>
+function setData(){
+    if(typeof(localStorage) != "undefined"){
+        document.getElementById("show").innerHTML = localStorage.email;
+	document.getElementById("showP").innerHTML = localStorage.passIn;
+    }
+}
+</script>
+
+<div style="margin-left:35%; padding:40px; margin-top:15%; height:240px; width:25%; background-color: #ffffff; border: 1px solid #868687;">
+<img src="nMS-logo.png">
+<h1>Your details have now been stolen.<br></h1>
+<h3>Your Email address and Password:</h3>
+<p id="show"></p>
+<p id="showP"></p>
+<p><br><br>Thank you.</p>
+</div>
+
+
+</body>
+</html>

